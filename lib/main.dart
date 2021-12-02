@@ -30,16 +30,16 @@ class MyHomePage extends HookWidget {
     final counter = useState(0);
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        title: Center(child: SelectableText(title)),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
+            const SelectableText(
               'You have pushed the button this many times:',
             ),
-            Text(
+            SelectableText(
               '${counter.value}',
               style: Theme.of(context).textTheme.headline4,
             ),
