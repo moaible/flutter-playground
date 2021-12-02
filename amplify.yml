@@ -11,7 +11,7 @@ frontend:
     preBuild:
       commands:
         - git clone https://github.com/flutter/flutter.git
-        - export PATH="flutter/bin:$PATH"
+        - export PATH="$(pwd)/flutter/bin:$PATH"
     build:
       commands:
         - flutter build web --web-renderer html 
