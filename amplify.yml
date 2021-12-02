@@ -1,0 +1,24 @@
+version: 1
+backend:
+  phases:
+    # IMPORTANT - Please verify your build commands
+    build:
+      commands:
+        - '# Execute Amplify CLI with the helper script'
+        - amplifyPush --simple
+frontend:
+  phases:
+    prebuild:
+      commands:
+        - git clone https://github.com/flutter/flutter.git
+        - export PATH="flutter/bin:$PATH"
+    build:
+      commands:
+        - flutter build web --web-renderer html 
+  artifacts:
+    # IMPORTANT - Please verify your build output directory
+    baseDirectory: build/web
+    files:
+      - '**/*'
+  cache:
+    paths: []
