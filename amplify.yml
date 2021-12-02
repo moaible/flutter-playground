@@ -8,7 +8,7 @@ backend:
         - amplifyPush --simple
 frontend:
   phases:
-    prebuild:
+    preBuild:
       commands:
         - git clone https://github.com/flutter/flutter.git
         - export PATH="flutter/bin:$PATH"
