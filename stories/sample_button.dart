@@ -7,7 +7,7 @@ class Button extends StatelessWidget {
   final String text;
   final ButtonStyles style;
 
-  Button(this.text, this.style);
+  const Button(this.text, this.style, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
