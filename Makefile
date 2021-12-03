@@ -10,7 +10,7 @@ build-web:
 run-story:
 	monarch run
 
-.PHONY: run-chrome
+.PHONY: run-web
 run-chrome:
 	flutter run -d chrome
 
