@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:playground/entry_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,42 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.orange,
       ),
-      home: const MyHomePage(title: 'Flutter & Amplify Demo'),
+      home: const EntryPage(title: 'Flutter & Amplify Demo'),
     );
   }
 }
-
-class MyHomePage extends HookWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-  final String title;
-
-  @override
-  Widget build(BuildContext context) {
-    final counter = useState(0);
-    return Scaffold(
-      appBar: AppBar(
-        title: Center(child: SelectableText(title)),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const SelectableText(
-              'You have pushed the button this many times:',
-            ),
-            SelectableText(
-              '${counter.value}',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => counter.value++,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
-    );
-  }
-}
-
