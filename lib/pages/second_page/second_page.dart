@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:playground/components/buttons/decrement_button.dart';
 
 class SecondPage extends HookWidget {
   const SecondPage({Key? key, required this.title}) : super(key: key);
@@ -21,15 +22,13 @@ class SecondPage extends HookWidget {
             ),
             SelectableText(
               '${counter.value}',
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headline1,
             ),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => counter.value--,
-        tooltip: 'Decrement',
-        child: const Icon(Icons.remove),
+      floatingActionButton: DecrementButton(
+        pressed: () => counter.value--,
       ),
     );
   }
