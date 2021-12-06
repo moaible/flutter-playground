@@ -11,6 +11,7 @@ class NeuText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return NeumorphicText(text,
+        // style: const NeumorphicStyle(color: Colors.black26),
         textStyle: NeumorphicTextStyle(
             fontStyle: FontStyle.normal,
             fontSize: size,

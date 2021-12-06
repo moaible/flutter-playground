@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:playground/pages/entry_page/entry_page.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,12 +12,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const NeumorphicApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.orange,
-      ),
-      home: const EntryPage(title: 'Flutter & Amplify Demo'),
+      home: EntryPage(title: 'Flutter & Amplify Demo'),
     );
   }
 }
