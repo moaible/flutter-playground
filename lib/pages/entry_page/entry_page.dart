@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:playground/components/buttons/increment_button.dart';
 import 'package:playground/components/text.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
@@ -21,14 +20,7 @@ class EntryPage extends HookWidget {
                 "You have pushed the button this many times:",
                 style: TextStyle(color: Colors.black38),
               ),
-              // const SelectableText(
-              //   'You have pushed the button this many times:',
-              // ),
               NeuText(text: '${counter.value}', size: 130),
-              // SelectableText(
-              //   '${counter.value}',
-              //   style: Theme.of(context).textTheme.headline1,
-              // ),
             ],
           ),
         ),
